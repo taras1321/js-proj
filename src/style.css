@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f5f6f8;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 42px;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.tabs li {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.tabs a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.center {
+  margin: 0 5px;
+}
+
+.tabs a.active {
+  border-bottom: 3px solid #31abec;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.form-item {
+  margin-top: 15px;
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #cccccc94;
+}
+
+input,
+textarea {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+input,
+select {
+  height: 40px;
+}
+
+label {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 3px;
+}
+::placeholder {
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+textarea {
+  padding-top: 10px;
+  resize: none;
+  height: 100px;
+}
+
+.button-create {
+  margin-top: 15px;
+  /* width: 120px; */
+  padding: 0 20px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #31abec;
+  cursor: pointer;
+}
+
+.panel {
+  margin-bottom: 30px;
+  background-color: #fff;
+  width: 100%;
+  min-height: 220px;
+  border-radius: 5px;
+  padding: 20px 0 10px 0;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.panel .panel-head {
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel .panel-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+.panel .panel-body {
+  padding: 20px 25px;
+  background-color: #f5f6f8;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.panel .panel-footer {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel .panel-footer span {
+  display: block;
+  padding: 10px 0;
+  font-weight: 300;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 10px;
+}
+
+.news {
+  padding: 0 20px;
+  height: 32px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #31abec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.note {
+  padding: 0 20px;
+  height: 32px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #42424291;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.panel button {
+  padding: 0 20px;
+  font-weight: normal;
+  font-size: 14px;
+  height: 36px;
+  color: #fff;
+  border-radius: 18px;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #4caf50c7;
+}
+
+.btn-red {
+  background-color: #f44336c7;
+}
+
+.loder {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loder div {
+  position: absolute;
+  border: 4px solid #31abec;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.loder div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.favorite ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* margin-left: 20px; */
+}
+
+.favorite li {
+  margin-top: 7px;
+  list-style: circle inside;
+}
+
+.favorite a {
+  text-decoration: none;
+  color: #31aaeca6;
+  font-size: 18px;
+}
+
+.favorite .center {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 1px solid #31aaecc0;
+}
